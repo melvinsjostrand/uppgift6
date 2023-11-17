@@ -1,8 +1,16 @@
 let board;
+let min = 1;
+let int = 10;
+let max = 4;
 let currentPlayer = 'X';
+let number = document.getElementById("tal");
 let text = document.getElementById("winner");
 
 function init() {
+    kvadrera();
+    tal();
+
+    console.log(tal());
     createBorder();
     document.addEventListener("click" , event =>{
         checkWin();
@@ -12,6 +20,7 @@ function init() {
         button.addEventListener("click" , event =>{
             reset();
         })
+
     }
 window.onload = init();
 
@@ -103,4 +112,23 @@ function checkTie() {
     }
     text.innerHTML = "Ingen vann!";
     return true;
+}
+
+function tal(){
+    let sum;
+    sum = (max - min + 1) * (min + max) / 2	
+    number.innerHTML = sum;
+    console.log(sum);
+    return sum;
+    }
+
+
+function kvadrera(int){
+    int = 20;
+    let intmath;
+    intmath = int*int;
+    number.innerHTML = " " + intmath;
+    console.log(intmath);
+    console.log(int);
+    return intmath;
 }
