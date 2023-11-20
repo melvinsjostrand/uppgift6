@@ -7,9 +7,9 @@ let number = document.getElementById("tal");
 let text = document.getElementById("winner");
 
 function init() {
+    reverseText();
     kvadrera();
     tal();
-
     console.log(tal());
     createBorder();
     document.addEventListener("click" , event =>{
@@ -127,8 +127,21 @@ function kvadrera(int){
     int = 20;
     let intmath;
     intmath = int*int;
-    number.innerHTML = " " + intmath;
+    number.innerHTML += " " + intmath;
     console.log(intmath);
-    console.log(int);
     return intmath;
 }
+
+function reverseText(){
+    let str = "gwa";
+    let reversedStr = str.split("").reverse().join('');
+
+    if(str === reversedStr){
+        console.log(reversedStr);
+    }else{
+        console.log("Detta är inte en palindrom");
+    } 
+}
+
+
+
