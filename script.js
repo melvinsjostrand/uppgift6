@@ -123,24 +123,26 @@ function tal(){
     }
 
 
-function kvadrera(int){
-    int = 20;
+function kvadrera(num){
     let intmath;
+    let kva = document.getElementById("kvadrera");
     intmath = int*int;
-    number.innerHTML += " " + intmath;
+    kva.innerHTML= intmath;
     console.log(intmath);
     return intmath;
 }
 
 function reverseText(){
-    let str = "gwa";
+    let str = "nidwain";
     let reversedStr = str.split("").reverse().join('');
-
+    let palindrom = document.getElementById("palindrom");
     if(str === reversedStr){
-        console.log(reversedStr);
+        console.log("Detta är en palindrom " + reversedStr);
+        palindrom.innerHTML = "Detta är en palindrom " + "(" + reversedStr + ")";
     }else{
         console.log("Detta är inte en palindrom");
-    } 
+        palindrom.innerHTML = "Detta är inte en palindrom " + "(" +reversedStr + ")";
+        } 
 }
 
 
