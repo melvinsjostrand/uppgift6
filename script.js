@@ -1,6 +1,6 @@
 let board;
 let min = 1;
-let int = 10;
+let int = 5;
 let max = 4;
 let currentPlayer = 'X';
 let number = document.getElementById("tal");
@@ -133,15 +133,14 @@ function kvadrera(num){
 }
 
 function reverseText(){
-    let str = "nidwain";
-    let reversedStr = str.split("").reverse().join('');
+    let str = "HEH";
     let palindrom = document.getElementById("palindrom");
-    if(str === reversedStr){
-        console.log("Detta är en palindrom " + reversedStr);
-        palindrom.innerHTML = "Detta är en palindrom " + "(" + reversedStr + ")";
+    if(str === str.split("").reverse().join('')){
+        console.log("Detta är en palindrom " + str.split("").reverse().join(''));
+        palindrom.innerHTML = "Detta är en palindrom " + "(" + str.split("").reverse().join('') + ")";
     }else{
         console.log("Detta är inte en palindrom");
-        palindrom.innerHTML = "Detta är inte en palindrom " + "(" +reversedStr + ")";
+        palindrom.innerHTML = "Detta är inte en palindrom " + "(" +str.split("").reverse().join('') + ")";
         } 
 }
 
